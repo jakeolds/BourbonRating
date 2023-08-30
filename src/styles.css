@@ -95,3 +95,27 @@ input, textarea {
 textarea {
     resize: vertical;
 }
+
+.navbar {
+    background-color: #8E7032; /* Bourbon color */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;  /* Change to start so items are aligned to the beginning */
+}
+
+.navbar a {
+    color: #FFF; /* White text */
+    margin: 0 10px;  /* Adjusted the margin to bring items closer */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar a svg {
+    margin-right: 5px; /* Add some space between the icon and the text */
+}
