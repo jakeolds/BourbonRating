@@ -1,3 +1,5 @@
+// message alert component, currently no function but skeleton added incase I think of an alert later.
+
 import React from 'react';
 
 const MessageAlert = ({ message, type }) => {

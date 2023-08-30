@@ -1,0 +1,10 @@
+.welcome-page {
+    background-image: url('https://www.gobourbon.com/wp-content/uploads/2022/09/IMG-2783-min-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+}

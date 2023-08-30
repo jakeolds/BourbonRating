@@ -20,7 +20,7 @@ const BourbonItem = ({ bourbon }) => {
             <img src={bourbon.imageUrl} alt={bourbon.name} className="bourbon-image" />
             <h2>{bourbon.name}</h2>
             <p>{bourbon.description}</p>
-            <p>Average Rating: {bourbon.ratings.reduce((total, rating) => total + rating.score, 0) / bourbon.ratings.length}</p>
+            <p>My Rating: {bourbon.ratings.reduce((total, rating) => total + rating.score, 0) / bourbon.ratings.length}</p>
             <button onClick={handleEdit}>Edit</button>
             <button onClick={handleDelete}>Delete</button>
         </div>

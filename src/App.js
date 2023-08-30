@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 
 import Navbar from './components/Navbar';
-import Home from './pages/HomePage';
+import WelcomePage from './pages/WelcomePage.js';
 import BourbonList from './components/BourbonList';
 import BourbonDetails from './features/BourbonDetails';
 import BourbonForm from './features/BourbonForm';
 
 import './index.css';
-import './styles.css';
+import './styles.css'; 
 
 function App() {
   return (
@@ -19,8 +19,10 @@ function App() {
         <div className="app dark-theme">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/bourbons" element={<BourbonList />} />
+            {/* Point the root to the WelcomePage */}
+            <Route path="/" element={<WelcomePage />} />  
+            {/* New route for the bourbon collection */}
+            <Route path="/my-collection" element={<BourbonList />} />  
             <Route path="/bourbons/:id" element={<BourbonDetails />} />
             <Route path="/add-bourbon" element={<BourbonForm />} />
             <Route path="/edit/:id" element={<BourbonForm />} />
