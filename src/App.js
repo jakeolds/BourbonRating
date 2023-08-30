@@ -10,7 +10,7 @@ import BourbonDetails from './features/BourbonDetails';
 import BourbonForm from './features/BourbonForm';
 
 import './index.css';
-import './styles.css'
+import './styles.css';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route path="/bourbons" element={<BourbonList />} />
             <Route path="/bourbons/:id" element={<BourbonDetails />} />
             <Route path="/add-bourbon" element={<BourbonForm />} />
+            <Route path="/edit/:id" element={<BourbonForm />} />
           </Routes>
         </div>
       </Router>

@@ -6,21 +6,21 @@ const initialState = [
         name: 'Woodford Reserve', 
         description: 'A personal favorite, smooth and rich.', 
         ratings: [{ userId: 'initial', score: 4.5 }], 
-        imageUrl: 'https://example.com/images/woodford-reserve.jpg'
+        imageUrl: 'https://kybourbontrail.com/wp-content/uploads/2018/01/woodford-on-counter.jpg'
     },
     { 
         id: '2', 
         name: 'Buffalo Trace', 
         description: 'A Homewtown classic.', 
         ratings: [{ userId: 'initial', score: 4.7 }],
-        imageUrl: 'https://example.com/images/buffalo-trace.jpg'
+        imageUrl: 'https://dydza6t6xitx6.cloudfront.net/ci-buffalo-trace-bourbon-62da7da303262963.jpeg'
     },
     { 
         id: '3', 
         name: 'Wild Turkey', 
         description: 'Bold and full of character.', 
         ratings: [{ userId: 'initial', score: 4.2 }],
-        imageUrl: 'https://example.com/images/wild-turkey.jpg'
+        imageUrl: 'https://wevino.store/cdn/shop/products/242.jpg?v=1693186042'
     }
 ];
 
