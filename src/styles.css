@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap'); 
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -37,18 +39,20 @@ button:hover {
 .bourbon-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
 }
 
-.bourbon-item {
+.bourbon-item, .add-button {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    width: 300px;
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    position: relative;
 }
 
 .bourbon-item h2 {
@@ -58,10 +62,15 @@ button:hover {
 
 .bourbon-item p {
     font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bourbon-item .notes {
+    margin-top: 10px;
 }
 
 .bourbon-image {
-    width: 100%;
+    max-width: 100%; /* Ensure the image doesn't break the layout */
     height: auto;
     margin-bottom: 10px;
 }
@@ -101,12 +110,12 @@ textarea {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: start;  /* Change to start so items are aligned to the beginning */
+    justify-content: start;
 }
 
 .navbar a {
     color: #FFF; /* White text */
-    margin: 0 10px;  /* Adjusted the margin to bring items closer */
+    margin: 0 10px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -118,4 +127,71 @@ textarea {
 
 .navbar a svg {
     margin-right: 5px; /* Add some space between the icon and the text */
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8E7032; /* Bourbon color */
+    color: white;
+    text-decoration: none;
+    height: calc(33.33% - 40px); /* To make it a square of same size as bourbon-item */
+}
+
+.add-button:hover {
+    background-color: #6D5826; /* A slightly darker shade for hover */
+}
+
+.cocktail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.cocktail-card {
+    background: #DAA520; /* Golden color */
+    height: 200px;
+    perspective: 1000px; /* Helps with 3D effect */
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden; /* Keeps the inside elements from spilling out */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card-front {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    background-color: #8B4513; /* SaddleBrown color */
+}
+
+.card-back {
+    background-color: #DAA520; /* Golden color */
+    transform: rotateY(180deg);
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+.cocktail-card:hover .card-inner {
+    transform: rotateY(180deg); /* Causes the flip */
 }

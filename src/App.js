@@ -8,6 +8,7 @@ import WelcomePage from './pages/WelcomePage.js';
 import BourbonList from './components/BourbonList';
 import BourbonDetails from './features/BourbonDetails';
 import BourbonForm from './features/BourbonForm';
+import BourbonCocktails from './pages/BourbonCocktails';  // Added this import
 
 import './index.css';
 import './styles.css'; 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/bourbons/:id" element={<BourbonDetails />} />
             <Route path="/add-bourbon" element={<BourbonForm />} />
             <Route path="/edit/:id" element={<BourbonForm />} />
+            <Route path="/bourbon-cocktails" element={<BourbonCocktails />} />
           </Routes>
         </div>
       </Router>

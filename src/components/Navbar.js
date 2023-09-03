@@ -14,6 +14,7 @@ const Navbar = () => {
                 <FontAwesomeIcon icon={faGlassWhiskey} />
                 My Collection
             </Link>
+            <Link to="/bourbon-cocktails">Bourbon Cocktails</Link>
         </nav>
     );
 };
